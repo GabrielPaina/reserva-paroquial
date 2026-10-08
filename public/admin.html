@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administração | Reserva Paroquial</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Reserva Paroquial</h1>
+        <p>Painel administrativo</p>
+    </header>
+
+    <main>
+        <section>
+
+            <h2>Reservas</h2>
+
+         <h2>Calendário de Reservas</h2>
+
+         <button id="novaReserva">
+    + Adicionar reserva
+</button>
+
+<div id="formNovaReserva" style="display: none;">
+
+    <h3>Nova reserva</h3>
+
+    <form id="formReservaAdmin">
+
+        <input
+            type="text"
+            id="nomeAdmin"
+            placeholder="Nome"
+            required
+        >
+
+        <input
+            type="text"
+            id="telefoneAdmin"
+            placeholder="Telefone"
+        >
+
+        <input
+            type="date"
+            id="dataAdmin"
+            required
+        >
+
+        <input
+            type="time"
+            id="horarioAdmin"
+            required
+        >
+
+        <input
+            type="number"
+            id="quantidadeAdmin"
+            placeholder="Quantidade de pessoas"
+            min="1"
+            required
+        >
+
+        <textarea
+            id="observacaoAdmin"
+            placeholder="Observação"
+        ></textarea>
+
+        <button type="submit">
+            Adicionar reserva
+        </button>
+
+        <button type="button" id="cancelarNovaReserva">
+            Cancelar
+        </button>
+
+    </form>
+
+</div>
+
+<div class="calendario-controles">
+    <button id="mesAnterior">←</button>
+
+    <h3 id="mesAtual"></h3>
+
+    <button id="mesProximo">→</button>
+</div>
+
+<div id="calendario"></div>
+
+            <div id="mensagem"></div>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+    <tr>
+        <th>Data</th>
+        <th>Horário</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Pessoas</th>
+        <th>Observação</th>
+        <th>Status</th>
+        <th>Ação</th>
+    </tr>
+</thead>
+
+                    <tbody id="listaReservas">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
